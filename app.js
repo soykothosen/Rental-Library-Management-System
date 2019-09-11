@@ -2,6 +2,22 @@
  var app = express();
  var path = require('path');
  var bodyParser = require('body-parser');
+ var mysql = require("mysql");
+
+ var db = mysql.createConnection({
+  host    : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'rentel_library'
+});
+ 
+db.connect(function(err){
+	if(err){
+		throw err;
+	}
+	console.log("Database is connected");
+});
+
 
  app.use(bodyParser.urlencoded({ extended: true }));
 
