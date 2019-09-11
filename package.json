@@ -1,0 +1,23 @@
+{
+  "name": "rental-library-management-system",
+  "version": "1.0.0",
+  "description": "Rental Library Management System is a web solution. By this a librarian manage library smartly.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soykothosen/Rental-Library-Management-System.git"
+  },
+  "author": "Soykot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soykothosen/Rental-Library-Management-System/issues"
+  },
+  "homepage": "https://github.com/soykothosen/Rental-Library-Management-System#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

@@ -92,16 +92,17 @@
   </header>
     </div>
     <div class="row">
-        <form class="form-signin">
+        <form class="form-signin"action="/" method="POST">
     <h1 class="h3 mb-3 font-weight-normal text-white toptext">Please Sign In</h1>
+  
     <div>
      <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> 
+    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> 
     </div>
 
     <div class="password">
      <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> 
+    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required> 
     </div>
     
 
@@ -118,10 +119,10 @@
   <div class="container">
   <div class="row">
     <div class="col">
-      <button type="button" class="btn btn-outline-primary buttons" >Sign In</button>
+      <button type="submit" class="btn btn-outline-primary buttons" >Sign In</button>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-outline-primary buttons">Sign Up</button>
+      <a role="button" class="btn btn-outline-primary buttons text-white" href="/signup">Sign Up</a>
     </div>
   </div>
   
