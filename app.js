@@ -36,7 +36,7 @@ db.connect(function(err){
  	res.sendFile(path.join( __dirname + '/ui.html'));
  });
   app.get('/studenttshow',function(req,res){
- 	res.(path.join( __dirname + '/studenttshow.html'));
+ 	res.sendFile(path.join( __dirname + '/studenttshow.html'));
  });
 
 
