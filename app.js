@@ -28,10 +28,22 @@ db.connect(function(err){
 
  app.post('/',function(req,res){
 
- 	var email = req.body.email;
- 	var password = req.body.password;
- 	console.log(email);
- 	res.send(email);
+ 	var memid = req.body.mem_id;
+ 	var password = req.body.pass;
+ 	console.log(memid);
+ 	db.query("SELECT pass FROM `persons` WHERE mem_no = ?",[memid],function(err, results, fields){
+   	if(err){
+   		throw err;
+   	}
+   	console.log(results[0].pass);
+   	//var = RowDataPacket.pass
+   	//console.log(RowDataPacket.pass);
+   	if (results[0].pass == password) {
+   		res.send('logIn');
+   	}
+   });
+ 	//var password1 = db.query(SELECT pass FROM `persons` WHERE mem_no = 'memid'); 
+ 	//res.send(password1);
     /*res.sendFile(path.join( __dirname + "/student.html"));*/
     
  });
