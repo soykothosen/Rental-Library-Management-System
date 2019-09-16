@@ -25,18 +25,53 @@ db.connect(function(err){
 
 
 
- db.query("SELECT * FROM `student`",function(err, results, fields){
-   	if(err){
-   		//throw err;
-   	}
-   	console.log(results.length);
-   });
+ 
+
+
+  
+  
 
  app.get('/',function(req,res){
  	res.sendFile(path.join( __dirname + '/ui.html'));
  });
+
+
   app.get('/studenttshow',function(req,res){
- 	res.sendFile(path.join( __dirname + '/studenttshow.html'));
+
+    db.query("SELECT * FROM `student`",function(err, results, fields){
+    if(err){
+      //throw err;
+    }
+    console.log(results.length);
+    
+    var i;
+    for (i = 0; i < results.length; i++) {
+    console.log(results[i].stud_no);
+    }
+    res.render('studenttshow', {length : results.length , result : results});
+   });
+
+ 	
+ });
+
+
+
+  app.get('/membershiptshow',function(req,res){
+
+    db.query("SELECT * FROM `membership`",function(err, results, fields){
+    if(err){
+      //throw err;
+    }
+    console.log(results.length);
+    
+    var i;
+    for (i = 0; i < results.length; i++) {
+    console.log(results[i].stud_no);
+    }
+    res.render('membershiptshow', {length : results.length , result : results});
+   });
+
+  
  });
 
 

@@ -23,17 +23,22 @@
 
   </div>
 </div>
-   <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      C1603028
-    </div>
-    <div class="col-sm">
-      Soykot Hosen
-    </div>
+<div class="container">
     
-  </div>
-</div>
+    <%var i;%>
+    <%for (i = 0; i < length; i++) {%>
+    
+    <div class="row">
+    <div class="col-sm">
+      <p><%=result[i].stud_no;%></p>
+    </div>
+    <div class="col-sm">
+     <p><%= result[i].stud_name;%></p>
+    </div>
+    </div>
+    <%}%>
+  
+   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
