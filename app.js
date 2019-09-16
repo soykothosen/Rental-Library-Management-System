@@ -74,6 +74,43 @@ db.connect(function(err){
   
  });
 
+  app.get('/booktshow',function(req,res){
+
+    db.query("SELECT * FROM `book`",function(err, results, fields){
+    if(err){
+      //throw err;
+    }
+    console.log(results.length);
+    
+    var i;
+    for (i = 0; i < results.length; i++) {
+    console.log(results[i].stud_no);
+    }
+    res.render('booktshow', {length : results.length , result : results});
+   });
+
+  
+ });
+
+
+  app.get('/issrectshow',function(req,res){
+
+    db.query("SELECT * FROM `iss_rec`",function(err, results, fields){
+    if(err){
+      //throw err;
+    }
+    console.log(results.length);
+    
+    var i;
+    for (i = 0; i < results.length; i++) {
+    //console.log(results[i].stud_no);
+    }
+    res.render('issrectshow', {length : results.length , result : results});
+   });
+
+  
+ });
+
 
 
  /*app.post('/',function(req,res){
